@@ -21,6 +21,7 @@
                     </tr>
                 @endforeach
             </table>
+            <p>Server: <strong><?php echo php_uname();?></strong></p>
         </div>
     </body>
 </html>
