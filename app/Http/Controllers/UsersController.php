@@ -11,7 +11,9 @@ class UsersController extends Controller
 	{
 		$users = User::orderBy('id', 'desc')->paginate(100);
 
-		return view('users.index', compact('users'));
+		$pdo = DB::connection()->getPdo();
+
+		return view('users.index', compact('users', 'pdo'));
 	}
 
 	public function store(Request $request)

@@ -23,5 +23,8 @@
             </table>
             <p>Server: <strong><?php echo php_uname();?></strong></p>
         </div>
+        <div class="wall">
+            {{ var_dump($pdo) }}
+        </div>
     </body>
 </html>
