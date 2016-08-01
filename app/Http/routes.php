@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('users',  ['as' => 'users.index', 'uses' => 'UsersController@index']);
-Route::post('users', ['as' => 'users.store', 'uses' => 'UsersController@store']);
+Route::post('users', ['middleware' => 'api', 'as' => 'users.store', 'uses' => 'UsersController@store']);
