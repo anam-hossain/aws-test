@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
 	public function index()
 	{
-		$users = User::paginate(100);
+		$users = User::orderBy('created_at', 'desc')->paginate(100);
 
 		return view('users.index', compact('users'));
+	}
+
+	public function store(Request $request)
+	{
+		User::create($request->all());
+
+		return redirect()->route('users.index');
 	}
 }

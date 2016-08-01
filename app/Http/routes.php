@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users', ['as' => 'users.index', 'uses' => 'UsersController@index']);
+Route::get('users',  ['as' => 'users.index', 'uses' => 'UsersController@index']);
+Route::post('users', ['as' => 'users.store', 'uses' => 'UsersController@store']);
