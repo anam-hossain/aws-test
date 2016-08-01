@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'read' => [
-                'host' => env('DB_HOST', 'localhost'),
+                'host' => env('DB_HOST_READ', 'localhost'),
             ],
             'write' => [
                 'host' => env('DB_HOST', 'localhost'),
